@@ -1,4 +1,4 @@
-//the app
+//This appears to be the main app
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');

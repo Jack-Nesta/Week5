@@ -1,4 +1,4 @@
-//Schema representation using Mongooose
+//Schema representation using Mongoose
 
 const mongoose = require('mongoose')
 

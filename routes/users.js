@@ -4,6 +4,7 @@ const router = express.Router();
 module.exports = router;
 
 //CRUD operations
+//Create
 router.post('/', async function (req, res) {
     //console.log(req.body);
     const data = new userModel({
@@ -21,7 +22,7 @@ router.post('/', async function (req, res) {
     res.status(400).json({message: error.message});//error is an object, and in that object is an error key
     }
 });
-
+//Read
 router.get('/', async function (req, res) {
     try {
         const data = await userModel.find();
@@ -32,7 +33,7 @@ router.get('/', async function (req, res) {
     res.status(400).json({message: error.message});
     }
 });
-
+//Update crud operations
 router.patch('/:id', async function (req, res) { //takes an id
     try {
         const id = req.params.id;
@@ -45,7 +46,7 @@ router.patch('/:id', async function (req, res) { //takes an id
     res.status(400).json({message: error.message});
     }
 });
-
+//Delete
 router.delete('/:id', async function (req, res) { 
     try {
         const id = req.params.id;
